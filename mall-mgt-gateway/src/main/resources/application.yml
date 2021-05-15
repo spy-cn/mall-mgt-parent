@@ -1,0 +1,21 @@
+#服务名
+spring:
+  application:
+    name: mall-mgt-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: mall-mgt-product-service
+          uri: lb://mall-mgt-product-service
+          predicates:
+            - Path=/product/**
+
+#端口号
+server:
+  port: 12000
+  #路由设置
+
+auth:
+  jwt:
+    pubKeyPath: D:\RSA\rsa.pub
+    cookieName: MALL-TOKEN

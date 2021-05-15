@@ -21,6 +21,7 @@
         <module>mall-mgt-product-service</module>
         <module>mall-mgt-payment-interface</module>
         <module>mall-mgt-payment-service</module>
+        <module>mall-mgt-gateway</module>
     </modules>
     <name>mall-mgt-parent</name>
     <description>电商平台类综合项目</description>
