@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spy.mall.product.svc.mapper.CategoryMapper">
+
+    <sql id="BASE_TABLE">base_category1</sql>
+    <sql id="ALL_COLUMNS">id,name</sql>
+
+    <select id="selectCategory" resultType="com.spy.mall.model.product.entity.Category1">
+        SELECT
+        <include refid="ALL_COLUMNS"/>
+        FROM
+        <include refid="BASE_TABLE"/>
+    </select>
+
+</mapper>
