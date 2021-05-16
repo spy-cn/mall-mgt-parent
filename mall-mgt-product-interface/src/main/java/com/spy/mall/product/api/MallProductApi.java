@@ -2,6 +2,7 @@ package com.spy.mall.product.api;
 
 import com.spy.mall.common.result.Result;
 import com.spy.mall.model.product.request.SpuRequest;
+import com.spy.mall.model.product.resp.SkuInfoResp;
 import com.spy.mall.model.product.resp.SpuBaseInfoResp;
 import com.spy.mall.model.product.resp.SpuSaleAttrResp;
 import com.spy.mall.model.product.resp.TrademarkResp;
@@ -23,6 +24,15 @@ import javax.annotation.Resource;
 
 @Api(tags = "2.商品信息管理数据")
 public interface MallProductApi {
+
+    /**
+     * 根据skuId查询库存信息
+     *
+     * @param skuId
+     * @return
+     */
+    @ApiOperation(value = "商品信息-查询库存信息")
+    public Result<SkuInfoResp> querySkuInfo(@ApiParam(value = "库存Id", required = true) Long skuId);
 
     /**
      * 根据三级分类id 查询商品SPU
